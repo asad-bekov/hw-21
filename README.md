@@ -157,9 +157,10 @@ docker compose up -d
 - Рабочий bash-скрипт сохраняет `.sql` в `/opt/backup`
 - Настроен `crontab` на каждую минуту
 - Получены успешные `.sql` резервные копии
+---
 
 - Структура каталогов
-
+<pre><code>```text
 /opt/
 ├── backup/
 │   ├── backup_20250523_140101.sql
@@ -167,6 +168,7 @@ docker compose up -d
 │   └── ...
 └── shvirtd-example-python/
     └── backup.sh
+```</code></pre>
 
 - Скрипт `backup.sh`
 
