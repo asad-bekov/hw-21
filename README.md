@@ -160,7 +160,8 @@ docker compose up -d
 ---
 
 - Структура каталогов
-<pre><code>```text
+
+<pre><code>
 /opt/
 ├── backup/
 │   ├── backup_20250523_140101.sql
@@ -168,7 +169,7 @@ docker compose up -d
 │   └── ...
 └── shvirtd-example-python/
     └── backup.sh
-```</code></pre>
+</code></pre>
 
 - Скрипт `backup.sh`
 
