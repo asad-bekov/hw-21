@@ -3,8 +3,6 @@
 
 ---
 
-## Выполненные задания
-
 ### Задание 0: Проверка Docker Compose
 - Удалён `docker-compose`
 - Установлен современный `docker compose` v2.35.1+
@@ -13,11 +11,11 @@
 
 *Описание*: Установлена современная версия Docker Compose (v2.35.1). Команда `docker compose version` показывает корректную информацию. Утилита `docker-compose` — это alias.
 
-## Скриншот
+### Скриншот
 
 ![Docker Compose Version](https://github.com/asad-bekov/hw-21/raw/main/img/1.png)
 
-### Задание 1: Dockerfile и Compose
+## Задание 1: Dockerfile и Compose
 - Создан файл `Dockerfile.python` на базе `python:3.9-slim`:
 
 ```yaml
@@ -69,41 +67,45 @@ services:
 
 - *Описание*: Приложение собрано на основе `Dockerfile.python`, используется образ `python:3.9-slim`, зависимости установлены, выполнен запуск с `not_tested_main.py`.
 
-## Скриншот
+### Скриншот
 
 `Docker Compose`
 
 ![Скриншот Docker Compose](https://github.com/asad-bekov/hw-21/raw/main/img/2.png)
 
 
-### Задание 2: Container Registry
+## Задание 2: Container Registry
 
 - Зарегистрирован Container Registry в Yandex Cloud
 - Настроена авторизация `docker` через `yc container registry configure-docker`
 - Загружен образ приложения в реестр
 - Выполнено сканирование на уязвимости (Docker Scout / Trivy)
 
-## Скриншоты
+### Скриншоты
 
 - Аутентификация в реестре
+
 ![Скриншот Container Registry](https://github.com/asad-bekov/hw-21/raw/main/img/4.png)
 
 - Тегирование и загрузка образа
+
 ![Скриншот Container Registry](https://github.com/asad-bekov/hw-21/raw/main/img/5.png)
 
 - Сканирование уязвимостей (Trivy)
+
 ![Скриншот Container Registry](https://github.com/asad-bekov/hw-21/raw/main/img/4.1.png)
 
 - Сканирование уязвимостей (Trivy - продолжение)
+
 ![Скриншот Container Registry](https://github.com/asad-bekov/hw-21/raw/main/img/4.2.png)
 
-### Задание 3: Compose + Proxy + MySQL
+## Задание 3: Compose + Proxy + MySQL
 - Создан `proxy.yaml` и объединён через `include`
 - Настроены 3 сервиса: `web`, `db`, `reverse-proxy`
 - Подключение к MySQL проверено через `docker exec`
 - Получен SQL-ответ через `SELECT * FROM requests LIMIT 10`
 
-## Скриншоты
+### Скриншоты
 - команда curl -L http://127.0.0.1:8090 возвращает в качестве ответа время и локальный IP-адрес
 
 ![команда curl -L http://127.0.0.1:8090 должна возвращать в качестве ответа время и локальный IP-адрес](https://github.com/asad-bekov/hw-21/raw/main/img/6.1.png)
@@ -111,7 +113,7 @@ services:
 - Скриншот MySQL-запроса
 ![Скриншот MySQL-запроса](https://github.com/asad-bekov/hw-21/raw/main/img/6.png)
 
-### Задание 4: Развёртывание в Yandex Cloud
+## Задание 4: Развёртывание в Yandex Cloud
 - Запущена ВМ (2 ГБ RAM)
 - Подключение по SSH
 - Bash-скрипт разворачивает проект в `/opt/shvirtd-example-python`
@@ -140,7 +142,7 @@ cd /opt/shvirtd-example-python
 docker compose up -d
 ```
 
-## Скриншоты
+### Скриншоты
 
 - SQL-запрос
 
@@ -150,7 +152,7 @@ docker compose up -d
 
 ![Ссылка на форк-репозиторий]https://github.com/asad-bekov/shvirtd-example-python)
 
-### Задание 5: Резервное копирование
+## Задание 5: Резервное копирование
 - Настроено резервное копирование через `schnitzler/mysqldump`
 - Рабочий bash-скрипт сохраняет `.sql` в `/opt/backup`
 - Настроен `crontab` на каждую минуту
@@ -186,7 +188,7 @@ else
 fi
 ```
 
-## Скриншоты
+### Скриншоты
 
 - Вывод crontab -l
 
@@ -200,12 +202,12 @@ fi
 ![Содержимое SQL-дампа](https://github.com/asad-bekov/hw-21/raw/main/img/6.3.png)
 
 
-### Задание 6: Извлечение бинарника Terraform
+## Задание 6: Извлечение бинарника Terraform
 - Использован `docker save` и `dive` для поиска `/bin/terraform`
 - Скопирован бинарник на хост и протестирован (`terraform version`)
 - Также продемонстрирован способ с `docker cp`
 
-## Скриншоты
+### Скриншоты
 
 - Скачивание образа с `Terraform`
 ![Скачивание образа с Terraform](https://github.com/asad-bekov/hw-21/raw/main/img/9.png)
@@ -216,13 +218,14 @@ fi
 - Проверка версии `Terraform`
 ![Проверка terraform version](https://github.com/asad-bekov/hw-21/raw/main/img/6.png)
 
-### Задание 7: runC
+## Задание 7: runC
+
 - Сгенерирован `rootfs` и `config.json`
 - Установлены переменные окружения
 - Приложение успешно запущено через `sudo runc run my-python-app`
 - Проверено: приложение отвечает на запросы, подключается к MySQL
 
-## Скриншоты
+### Скриншоты
 
 - Запуск приложения с `runс` 
 
@@ -233,5 +236,8 @@ fi
 
 ![Ответ от Flask-приложения]
 (https://github.com/asad-bekov/hw-21/raw/main/img/8.1.png)
+
+
 ---
 
+*примечание:* - некоторые скрины растянулись, так как возникли проблемы с графикой в VM
