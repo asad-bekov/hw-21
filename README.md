@@ -148,9 +148,7 @@ docker compose up -d
 
 ![SQL-запрос](https://github.com/asad-bekov/hw-21/raw/main/img/2.1.png)
 
-- Ссылка на форк-репозиторий
-
-[Ссылка на форк-репозиторий](https://github.com/asad-bekov/shvirtd-example-python)
+- [Ссылка на форк-репозиторий](https://github.com/asad-bekov/shvirtd-example-python)
 
 ## Задание 5: Резервное копирование
 - Настроено резервное копирование через `schnitzler/mysqldump`
