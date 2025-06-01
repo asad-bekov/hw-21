@@ -211,12 +211,15 @@ fi
 ### Скриншоты
 
 - Скачивание образа с `Terraform`
+
 ![Скачивание образа с Terraform](https://github.com/asad-bekov/hw-21/raw/main/img/9.png)
 
 - Просмотр слоев через dive, сохранение и распаковка образа
+
 ![Просмотр слоев через dive](https://github.com/asad-bekov/hw-21/raw/main/img/9.1.png)
 
 - Проверка версии `Terraform`
+
 ![Проверка terraform version](https://github.com/asad-bekov/hw-21/raw/main/img/6.png)
 
 ## Задание 7: runC
@@ -230,13 +233,11 @@ fi
 
 - Запуск приложения с `runс` 
 
-![Запуск runC-контейнера]
-(https://github.com/asad-bekov/hw-21/raw/main/img/8.png)
+![Запуск runC-контейнера](https://github.com/asad-bekov/hw-21/raw/main/img/8.png)
 
 - Проверка работы приложения
 
-![Ответ от Flask-приложения]
-(https://github.com/asad-bekov/hw-21/raw/main/img/8.1.png)
+![Ответ от Flask-приложения](https://github.com/asad-bekov/hw-21/raw/main/img/8.1.png)
 
 
 ---
